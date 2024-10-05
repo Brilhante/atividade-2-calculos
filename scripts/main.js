@@ -62,7 +62,8 @@ const openModalTabuada = () => {
     resultadoTabuada.innerHTML = '';
 }
 
-const calcularTabuada = () => {
+const calcularTabuada = (event) => {
+    event.preventDefault()
 
     const numeroTabuada = document.getElementById('numeroTabuada');
     const resultadoTabuada = document.getElementById('resultadoTabuada');
@@ -73,7 +74,8 @@ const calcularTabuada = () => {
     }
     resultadoTabuada.innerHTML = resultado;
 }
-const calcularMediaAluno = () => {
+const calcularMediaAluno = (event) => {
+    event.preventDefault()
     const resultadoMediaAluno = document.getElementById('resultadoMediaAluno');
     const nomeAluno = document.getElementById('nomeAluno');
     const nomeDisciplina = document.getElementById('nomeDisciplina');
@@ -85,7 +87,8 @@ const calcularMediaAluno = () => {
     resultadoMediaAluno.innerHTML = `A média do aluno <strong> ${nomeAluno.value} </strong> na disciplina <strong> ${nomeDisciplina.value} </strong> é <strong> ${mediaAluno} </strong>`;
 }
 
-const calcularContagemN = () => {
+const calcularContagemN = (event) => {
+    event.preventDefault()
     const numeroN = document.getElementById('numeroN');
     const resultadoContagemN = document.getElementById('resultadoContagemN');
     const numero = parseInt(numeroN.value);
@@ -96,7 +99,8 @@ const calcularContagemN = () => {
     resultadoContagemN.innerHTML = resultado;
 }
 
-const calcularIdade = () => {
+const calcularIdade = (event) => {
+    event.preventDefault()
     const dataNascimento = new Date(document.getElementById('dataNascimento').value);
     const anoNascimento = dataNascimento.getFullYear();
     const idade = new Date().getFullYear() - anoNascimento;
@@ -105,7 +109,8 @@ const calcularIdade = () => {
     return false;
 }
 
-const  calcularFatorial = () => {
+const  calcularFatorial = (event) => {
+    event.preventDefault()
     const numeroFatorial = document.getElementById('numeroFatorial');
     const resultadoFatorial = document.getElementById('resultadoFatorial');
     const numero = parseInt(numeroFatorial.value);
@@ -116,7 +121,8 @@ const  calcularFatorial = () => {
     resultadoFatorial.innerHTML = `O fatorial de <strong>${numero}</strong> é <strong>${fatorial}</strong>`;
 }
 
-const verificarParImpar = () => {
+const verificarParImpar = (event) => {
+    event.preventDefault()
     const numeroParImpar = document.getElementById('numeroParImpar');
     const resultadoParImpar = document.getElementById('resultadoParImpar');
     const numero = parseInt(numeroParImpar.value);
